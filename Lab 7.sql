@@ -6,7 +6,7 @@
 SET SERVEROUTPUT ON
 DECLARE
 	Donor_age Donor.Age%Type;
-	Donor_name Donor.Donorname%Type := 'argho';
+	Donor_name Donor.Donorname%Type := 'kowshik';
 	Donor_phone_no Donor.Phone_no%Type;
 BEGIN
 	SELECT Age INTO Donor_age 
@@ -21,6 +21,7 @@ BEGIN
 	' and phone no is 0' || Donor_phone_no);
 END;
 /
+show errors
 
 
 -- finding out the oldest donor without using max() --

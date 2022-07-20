@@ -19,7 +19,7 @@ WHERE Blood_type NOT IN ('B+','A+');
 
 -- finding hospitals where Hospitalname is starting with Khulna --
 SELECT H_Id,Hospitalname,Address
-FROM Hospitals
+FROM Hospital
 WHERE Hospitalname LIKE 'Khulna%';
 
 

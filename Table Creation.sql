@@ -33,7 +33,7 @@ CREATE TABLE Blood (
 	Rid INTEGER NOT NULL,
 	Donation_date DATE,	
 	FOREIGN KEY (Did) REFERENCES Donor ON DELETE CASCADE,
-	FOREIGN KEY (Rid) REFERENCES Receiptionist 
+	FOREIGN KEY (Rid) REFERENCES Receiptionist ON DELETE SET NULl
 );
 
 CREATE TABLE BloodBank (
@@ -58,21 +58,13 @@ CREATE TABLE Orders (
     Foreign KEY (Blood_type) REFERENCES Bloodbank ON DELETE CASCADE
 );
 
-CREATE TABLE Employee (
-	E_Id INTEGER PRIMARY KEY,
-	Employee_name VARCHAR(15) NOT NULL,
-	Role VARCHAR(20) NOT NULL,
-	Address VARCHAR(20),
-	Phone_no NUMBER(11) UNIQUE 
-); 
-
 --- Describing tables ---
 DESCRIBE Blood;
 DESCRIBE Bloodbank;
+DESCRIBE Receiptionist;
 DESCRIBE Donor;
 DESCRIBE Hospital;
 DESCRIBE Orders;
-DESCRIBE Employee;
 
 
 --- Inserting data ---
